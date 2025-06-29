@@ -42,6 +42,7 @@ const NotificationItem = ({ notification, onRead }) => {
         )}
       </div>
 
+      {/* ✅ Only render dot if isNew */}
       {notification.isNew && (
         <span className="notification-dot" data-testid="notification-dot"></span>
       )}
