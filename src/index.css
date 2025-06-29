@@ -140,3 +140,27 @@ footer {
     flex-direction: column;
   }
 }
+.notification-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  margin-left: 6px;
+}
+
+.notification-text-private-message {
+  display: none;
+}
+
+.notification-text-private-message.visible {
+  display: block;
+}
+
+.new-notification {
+  background-color: #f5f9ff;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}

@@ -18,6 +18,7 @@ const NotificationItem = ({ notification, onRead }) => {
       className={notification.isNew ? 'new-notification' : ''}
     >
       <img src={notification.avatar} alt={notification.name} className="avatar" />
+
       <div className="notification-infos">
         <a href="#" className="profile-link">{notification.name}</a>
 
@@ -26,17 +27,24 @@ const NotificationItem = ({ notification, onRead }) => {
           {notification.post && (
             <a href="#" className="notification-link-post"> {notification.post}</a>
           )}
-          {notification.isNew && <span className="notification-dot" />}
         </div>
 
         <div className="notification-time">{notification.time}</div>
 
         {notification.privateMessage && (
-          <div className={`notification-text-private-message ${showMessage ? 'visible' : ''}`}>
+          <div
+            className={`notification-text-private-message ${
+              showMessage ? 'visible' : ''
+            }`}
+          >
             {notification.privateMessage}
           </div>
         )}
       </div>
+
+      {notification.isNew && (
+        <span className="notification-dot" data-testid="notification-dot"></span>
+      )}
 
       {notification.image && (
         <img

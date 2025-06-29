@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import NotificationItem from './NotificationItem';
-import './NotificationsPage.css';
 
 const initialNotifications = [
   {
     id: 1,
     name: 'Mark Webber',
-    avatar: './assets/avatar-mark-webber.webp',
+    avatar: 'https://i.imgur.com/QCNbOAo.png',
     action: 'reacted to your recent post',
     post: 'My first tournament today!',
     time: '1m ago',
@@ -15,7 +14,7 @@ const initialNotifications = [
   {
     id: 2,
     name: 'Angela Gray',
-    avatar: './assets/avatar-angela-gray.webp',
+    avatar: 'https://i.imgur.com/BtJ2WVU.png',
     action: 'followed you',
     time: '5m ago',
     isNew: true,
@@ -23,7 +22,7 @@ const initialNotifications = [
   {
     id: 3,
     name: 'Jacob Thompson',
-    avatar: './assets/avatar-jacob-thompson.webp',
+    avatar: 'https://i.imgur.com/xKplYVZ.png',
     action: 'has joined your group',
     post: 'Chess Club',
     time: '1 day ago',
@@ -32,25 +31,26 @@ const initialNotifications = [
   {
     id: 4,
     name: 'Rizky Hasanuddin',
-    avatar: './assets/avatar-rizky-hasanuddin.webp',
+    avatar: 'https://i.imgur.com/DNkNLeW.png',
     action: 'sent you a private message',
     time: '5 days ago',
     isNew: true,
-    privateMessage: `Hello, thanks for setting up the Chess Club. I’ve been a member for a few weeks now and I’m already having lots of fun and improving my game.`,
+    privateMessage:
+      'Hello, thanks for setting up the Chess Club. I’ve been a member for a few weeks now and I’m already having lots of fun and improving my game.',
   },
   {
     id: 5,
     name: 'Kimberly Smith',
-    avatar: './assets/avatar-kimberly-smith.webp',
+    avatar: 'https://i.imgur.com/rBdOztq.png',
     action: 'commented on your picture',
     time: '1 week ago',
     isNew: false,
-    image: './assets/image-chess.webp',
+    image: 'https://i.imgur.com/GQ8gXLl.png',
   },
   {
     id: 6,
     name: 'Nathan Peterson',
-    avatar: './assets/avatar-nathan-peterson.webp',
+    avatar: 'https://i.imgur.com/zXM1qVH.png',
     action: 'reacted to your recent post',
     post: '5 end-game strategies to increase your win rate',
     time: '2 weeks ago',
@@ -59,7 +59,7 @@ const initialNotifications = [
   {
     id: 7,
     name: 'Anna Kim',
-    avatar: './assets/avatar-anna-kim.webp',
+    avatar: 'https://i.imgur.com/9g3eBpM.png',
     action: 'left the group',
     post: 'Chess Club',
     time: '2 weeks ago',
@@ -101,7 +101,7 @@ const NotificationsPage = () => {
       </ul>
 
       <footer>
-        Challenge by <a href="https://crio.do">Crio.Do</a>. Coded by Ketan Makode.
+        Challenge by <a href="https://crio.do">Crio.Do</a>. Coded by Avinash Roy.
       </footer>
     </main>
   );
