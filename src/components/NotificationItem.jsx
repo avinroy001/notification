@@ -8,7 +8,7 @@ const NotificationItem = ({ notification, onRead }) => {
       onRead(notification.id);
     }
     if (notification.privateMessage) {
-      setShowMessage(prev => !prev);
+      setShowMessage((prev) => !prev);
     }
   };
 
@@ -17,20 +17,34 @@ const NotificationItem = ({ notification, onRead }) => {
       <img src={notification.avatar} alt={notification.name} className="avatar" />
       <div className="notification-infos">
         <a href="#" className="profile-link">{notification.name}</a>
-        <span className="action"> {notification.action}</span>
-        {notification.post && (
-          <a href="#" className="notification-link-post">{notification.post}</a>
-        )}
-        {notification.isNew && <span className="notification-dot" />}
+        
+        <div className="notification-text">
+          <span className="action"> {notification.action}</span>
+          {notification.post && (
+            <a href="#" className="notification-link-post"> {notification.post}</a>
+          )}
+          {notification.isNew && <span className="notification-dot" />}
+        </div>
+
         <div className="notification-time">{notification.time}</div>
+
         {notification.privateMessage && (
-          <div className={`notification-text-private-message ${showMessage ? 'visible' : ''}`}>
+          <div
+            className={`notification-text-private-message ${
+              showMessage ? 'visible' : ''
+            }`}
+          >
             {notification.privateMessage}
           </div>
         )}
       </div>
+
       {notification.image && (
-        <img src={notification.image} alt="extra" style={{ width: "50px", borderRadius: "6px" }} />
+        <img
+          src={notification.image}
+          alt="preview"
+          style={{ width: '50px', height: '50px', borderRadius: '6px' }}
+        />
       )}
     </li>
   );
