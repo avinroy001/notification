@@ -13,11 +13,14 @@ const NotificationItem = ({ notification, onRead }) => {
   };
 
   return (
-    <li onClick={handleClick} className={notification.isNew ? 'new-notification' : ''}>
+    <li
+      onClick={handleClick}
+      className={notification.isNew ? 'new-notification' : ''}
+    >
       <img src={notification.avatar} alt={notification.name} className="avatar" />
       <div className="notification-infos">
         <a href="#" className="profile-link">{notification.name}</a>
-        
+
         <div className="notification-text">
           <span className="action"> {notification.action}</span>
           {notification.post && (
@@ -29,11 +32,7 @@ const NotificationItem = ({ notification, onRead }) => {
         <div className="notification-time">{notification.time}</div>
 
         {notification.privateMessage && (
-          <div
-            className={`notification-text-private-message ${
-              showMessage ? 'visible' : ''
-            }`}
-          >
+          <div className={`notification-text-private-message ${showMessage ? 'visible' : ''}`}>
             {notification.privateMessage}
           </div>
         )}
